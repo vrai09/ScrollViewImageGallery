@@ -14,6 +14,7 @@
 		59770A0C1F38E9AC00C92A0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59770A0B1F38E9AC00C92A0E /* Assets.xcassets */; };
 		59770A0F1F38E9AC00C92A0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59770A0D1F38E9AC00C92A0E /* LaunchScreen.storyboard */; };
 		59770A1A1F38E9AD00C92A0E /* ScrollViewImageGalleryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59770A191F38E9AD00C92A0E /* ScrollViewImageGalleryTests.m */; };
+		59770A261F3972B800C92A0E /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59770A251F3972B800C92A0E /* ImageDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		59770A151F38E9AD00C92A0E /* ScrollViewImageGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewImageGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59770A191F38E9AD00C92A0E /* ScrollViewImageGalleryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewImageGalleryTests.m; sourceTree = "<group>"; };
 		59770A1B1F38E9AD00C92A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59770A241F3972B800C92A0E /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
+		59770A251F3972B800C92A0E /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				59770A051F38E9AC00C92A0E /* ViewController.h */,
 				59770A061F38E9AC00C92A0E /* ViewController.m */,
 				59770A081F38E9AC00C92A0E /* Main.storyboard */,
+				59770A241F3972B800C92A0E /* ImageDetailViewController.h */,
+				59770A251F3972B800C92A0E /* ImageDetailViewController.m */,
 				59770A0B1F38E9AC00C92A0E /* Assets.xcassets */,
 				59770A0D1F38E9AC00C92A0E /* LaunchScreen.storyboard */,
 				59770A101F38E9AC00C92A0E /* Info.plist */,
@@ -216,6 +221,7 @@
 				59770A071F38E9AC00C92A0E /* ViewController.m in Sources */,
 				59770A041F38E9AC00C92A0E /* AppDelegate.m in Sources */,
 				59770A011F38E9AC00C92A0E /* main.m in Sources */,
+				59770A261F3972B800C92A0E /* ImageDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

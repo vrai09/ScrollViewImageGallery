@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "ImageDetailViewController.h"
 
 @interface ViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tap;
+
 
 
 @end
@@ -21,8 +24,6 @@
     [super viewDidLoad];
     
     _scrollView.delegate = self;
-    _scrollView.minimumZoomScale = 0.5;
-    _scrollView.maximumZoomScale = 2.0;
     _scrollView.pagingEnabled = YES;
     
     
@@ -32,15 +33,10 @@
     NSArray *images = @[image1, image2, image3];
     
     
-    //int i = 0;
     for(UIImageView *imageView in images) {
-        /*imageView.frame = CGRectMake(i*_scrollView.frame.size.width, 0, _scrollView.frame.size.width, _scrollView.frame.size.height); */
         
         imageView.contentMode = UIViewContentModeScaleAspectFit;
-
-       // [_scrollView addSubview:imageView];
         
-        //i++;
     }
     
     UIStackView *stackview = [[UIStackView alloc]initWithArrangedSubviews:images];
@@ -58,8 +54,19 @@
     [stackview.leadingAnchor constraintEqualToAnchor:_scrollView.leadingAnchor].active = YES;
     [stackview.trailingAnchor constraintEqualToAnchor:_scrollView.trailingAnchor].active = YES;
     
-    _pageControl.numberOfPages = images.count;
-        
+    UIImage* sender;
+    if([images objectAtIndex:0]) {
+        sender = image1.image;
+    }else if([images objectAtIndex:1]) {
+        sender = image2.image;
+    }else{
+        sender = image3.image;
+    }
+    [self performSegueWithIdentifier:@"Details" sender:sender];
+    
+    
+    
+    
 }
 
 
@@ -70,6 +77,13 @@
     NSInteger page = lround(fractionalPage);
     self.pageControl.currentPage = page;
 }
+
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    
+    ImageDetailViewController *details = [[ImageDetailViewController alloc]init];
+    details.imageView.image = sender;
+}
+
 
 
 @end
